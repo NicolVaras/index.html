@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Faro - Periódico Local</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos generales para el cuerpo y el HTML */
+        body, html {
+            font-family: 'Roboto', sans-serif; /* Tipografía Roboto */
+            background-color: #f5f5f5; /* Fondo gris claro */
+            margin: 0; /* Eliminar márgenes predeterminados */
+            padding: 0; /* Eliminar padding predeterminado */
+        }
+        
+        /* Estilos para el header y footer */
+        header, footer {
+            background-color: #c9d2d0; /* Fondo gris claro para header y footer */
+            color: #31231e; /* Color de texto oscuro */
+            padding: 20px; /* Espacio interno */
+            text-align: center; /* Centrar texto */
+        }
+        
+        /* Estilos para la navegación */
+        nav ul {
+            list-style-type: none; /* Eliminar viñetas de la lista */
+            padding: 0; /* Eliminar padding */
+            display: flex; /* Usar Flexbox para alinear elementos en fila */
+            justify-content: center; /* Centrar los elementos de la lista */
+        }
+        
+        nav li {
+            margin: 0 10px; /* Espacio entre los elementos de la lista */
+        }
+        
+        nav a {
+            text-decoration: underline; /* Subrayar enlaces */
+            color: inherit; /* Heredar color del elemento padre */
+        }
+        
+        nav a:hover {
+            font-weight: bold; /* Negrita al pasar el mouse */
+            text-decoration: none; /* Quitar subrayado al pasar el mouse */
+        }
+        
+        main {
+            padding: 20px; /* Espacio interno en el main */
+        }
+        
+        section {
+            margin-bottom: 40px; /* Margen inferior entre secciones */
+        }
+        
+        /* Estilos para el contenedor de grilla de artículos */
+        .grid-container {
+            display: grid; /* Usar CSS Grid para el layout */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Crear columnas responsivas */
+            grid-gap: 20px; /* Espacio entre los elementos de la grilla */
+        }
+        
+        /* Estilos para cada bloque de artículo */
+        .grid-item {
+            background-color: white; /* Fondo blanco para los artículos */
+            padding: 20px; /* Espacio interno */
+            transition: background-color 0.3s, color 0.3s; /* Transición suave para hover */
+        }
+        
+        /* Efecto de hover en los bloques de artículo */
+        .grid-item:hover {
+            background-color: black; /* Fondo negro al pasar el mouse */
+            color: white; /* Texto blanco al pasar el mouse */
+        }
+
+        /* Media Query para pantallas pequeñas */
+        @media (max-width: 600px) {
+            .grid-container {
+                grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="png.jpg" alt="Logo de El Faro" width="200"> <!-- Logo del periódico -->
+        <h1>El Faro</h1> <!-- Título del periódico -->
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li> <!-- Enlace a la página de inicio -->
+                <li><a href="#deportes">Deporte</a></li> <!-- Enlace a la sección de deportes -->
+                <li><a href="#negocios">Negocios</a></li> <!-- Enlace a la sección de negocios -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="noticias"> 
+            <h2>Noticias</h2>
+            <div class="grid-container"> <!-- Contenedor de grilla para las noticias -->
+                <div class="grid-item"> <!-- Bloque de artículo -->
+                    <h3>'Robos del siglo': los cinco asaltos millonarios que han impactado a Chile en una década</h3>
+                    <p>General</p>
+                    <p>Al violento atraco el 16 de agosto a una sucursal de una empresa de transporte de valores en la ciudad de Rancagua, se suman otros hechos similares que han tenido variados desenlaces. Tres de ellos ocurrieron en el aeropuerto de Santiago</p>
+                </div>
+                <div class="grid-item"> <!-- Bloque de artículo -->
+                    <h3>La región del Biobío, al sur de Chile, se sumerge en la ciencia y las ideas</h3>
+                    <p>General</p>
+                    <p>Este viernes en la ciudad de Concepción, a 500 kilómetros al sur de Santiago de Chile, el Festival Puerto de Ideas BioBío inaugura su tercera versión. El que se considera uno de los eventos de divulgación científica y más importantes de Latinoamérica tendrá, hasta el domingo 25, el foco puesto en el mar y la naturaleza con exposiciones de más de una decena de investigadores chilenos y extranjeros pertenecientes a diferentes disciplinas.</p>
+                </div>
+                <div class="grid-item"> <!-- Bloque de artículo -->
+                    <h3>Boric tras el fallo del Tribunal Supremo a favor de Maduro: "La dictadura de Venezuela no es la izquierda"</h3>
+                    <p>General</p>
+                    <p>El mandatario ha señalado que "Chile no reconoce este falso triunfo autoproclamado de Maduro y compañía" y que "no hay duda que estamos frente a una dictadura que falsea elecciones"</p>
+                </div>
+            </div>
+            <video controls>
+                <source src="cnnintro.mp4" type="video/mp4"> <!-- Video de introducción -->
+                Tu navegador no soporta el elemento de video.
+            </video>
+            <audio controls>
+                <source src="audio1.m4a" type="audio/mpeg"> <!-- Audio relacionado -->
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </section>
+
+        <section id="deportes">
+            <h2>Deportes</h2>
+            <div class="grid-container"> <!-- Contenedor de grilla para deportes -->
+                <div class="grid-item"> <!-- Bloque de artículo -->
+                    <h3>Gobierno transfirió más de $ 1 millón para deportistas olímpicos ecuatorianos</h3>
+                    <p>Deporte</p>
+                    <div class="image-container">
+                        <img src="deportes1.avif" alt="Logo de El Faro" width="200"> <!-- Imagen del artículo -->
+                    </div>
+                    <p>Ministerio de Economía anunció la entrega de los premios económicos por las medallas recibidas en las Olimpiadas París 2024.</p>
+                </div>
+                <div class="grid-item"> <!-- Bloque de artículo -->
+                    <h3>Alegrías y penas del deporte</h3>
+                    <p>Deporte</p>
+                    <p>Es menester que los ministerios, autoridades y demás gente involucrada en el ámbito deportivo hagan acopio y valoren estos triunfos...</p>
+                    <div class="image-container">
+                        <img src="deportes2.png" alt="Logo de El Faro" width="200"> <!-- Imagen del artículo -->
+                    </div>
+                </div>
+                <div class="grid-item"> <!-- Bloque de artículo -->
+                    <h3>Imane Khelif, la cuestionada campeona olímpica en París 2024 por sus altos niveles de testosterona, muestra su lado femenino</h3>
+                    <p>Deporte</p>
+                    <p>La pugilista argelina fue acusada falsamente de ser transgénero, tras su combate en cuartos de final contra la italiana Angela Carini.</p>
+                    <div class="image-container">
+                        <img src="deportes3.png" alt="Logo de El Faro" width="200"> <!-- Imagen del artículo -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="negocios">
+            <h2>Negocios</h2>
+            <div class="grid-container"> <!-- Contenedor de grilla para negocios -->
+                <div class="grid-item"> <!-- Bloque de artículo -->
+                    <h3>Irlanda dona EUR 200.000 para reforzar los proyectos del STDF relacionados con la inocuidad alimentaria y el comercio en todo el mundo</h3>
+                    <p>Irlanda aportará EUR 200.000 (aproximadamente CHF 190.000) al Fondo para la Aplicación de Normas y el Fomento del Comercio (STDF) a fin de apoyar sus iniciativas en curso para mejorar la inocuidad alimentaria y el comercio de productos agropecuarios a nivel mundial. Esta donación contribuirá a hacer avanzar los proyectos y programas del STDF destinados a mejorar el acceso a los mercados mundiales y regionales para las economías en desarrollo y los países menos adelantados (PMA).</p>
+                </div>
+                <div class="grid-item"> <!-- Bloque de artículo -->
+                    <h3>Se abre el plazo para la inscripción en el curso de la OMC sobre los aspectos del comercio electrónico relacionados con los servicios</h3>
+                    <p>Se invita a los funcionarios gubernamentales de los Miembros de la OMC y los observadores ante la Organización que reúnan las condiciones necesarias para beneficiarse de las actividades de asistencia técnica a que, a más tardar el 30 de agosto, presenten sus solicitudes para participar en el Curso Temático sobre los Aspectos del Comercio Electrónico relacionados con los Servicios de 2024, que se celebrará del 12 al 15 de noviembre en la OMC.</p>
+                </div>
+                <div class="grid-item"> <!-- Bloque de artículo -->
+                    <h3>La Directora General Okonjo-Iweala da la bienvenida a las Comoras como 165º Miembro de la OMC</h3>
+                    <p>Las Comoras se adhirieron a la OMC como 165º Miembro el 21 de agosto, tras haber negociado durante 17 años sus condiciones de adhesión con los Miembros de la OMC. Se trata del 10º país menos adelantado (PMA) que se adhiere a la OMC por vía de negociaciones. Las Comoras anunciaron asimismo su aceptación formal del Acuerdo sobre Subvenciones a la Pesca de la OMC.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 El Faro. Todos los derechos reservados.</p> <!-- Derechos de autor -->
+    </footer>
+</body>
+</html>
